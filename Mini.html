@@ -3,28 +3,44 @@
         background-image: url('Back.png');
         background-repeat: repeat;
     }
-    h1, h2, p, h3{
+    h1, h2, p, h3, ul, a{
     color:rgb(186, 103, 103); 
     text-align:center; 
     font-family:'Courier New';
     }
-
+    ul{
+        background-image: url('Back.png');
+        background-size: 50;
+        position: sticky;    
+        top: 0;
+    }
+    a{
+        text-decoration:none;
+    }
     img{
         width: 410;
         height: 410;
-        flex-wrap: wrap;       /* allows wrapping on small screens */
+        flex-wrap: wrap;     
         justify-content: center;
-        gap: 10px;              /* spacing between images */
-        margin: 20px 0;
-        border-radius: 8px;
+        /*gap: 0px;*/          
+        margin: 10px ;
+        border-radius: 22px;
     }
-    
-    /*display: flex; */
 </style>
+<ul style="text-align: center; font-size: 30; font-weight: bold; "> 
+    <br>
+
+    <a href="#scarf">•Scarf</a>
+    <a href="#bracelet">•Bracelet</a>
+    <a href="#bottle">•WaterBottle</a>
+    <a href="#hairclips">•HairClip</a>
+    <a href="#hairbands">•HairBand</a>
+    <a href="#bags">•Bag</a>
+    <a href="#tools">•MakeUpTool</a>
+</ul>
 
 <div style="text-align: center;">
     <img src="Logo.png">
-</div>
 
 <h1 style="font-size: 50;">
     Who We Are
@@ -35,72 +51,68 @@
     <br>Whether you're looking for the perfect gift or just treating yourself, our handpicked collection of accessories, school supplies, plushies, and everyday must-haves brings joy and color to your daily life. <br>
     <br>Stop by and discover something special—there’s a little magic waiting for everyone!
 </h3>
-
+</div >
 <h1 style="font-size: 50;">
     Check It Out!
 </h1>
 
-  
+<div id="scarf" style="text-align: center;">
 <h2>
     Silk Scarf
 </h2>
-<div style="text-align: center;">
     <img src="BlackScarf.JPG">
     <img src="ColorScarf.JPG">
     <img src="GreenScarf.JPG">
 </div>
 
 
-
+<div id="bracelet" style="text-align: center;">
 <h2>
     Bracelet
 </h2>
-<div style="text-align: center;">
     <img src="Bracelet.JPG">
     <img src="RedBracelet.JPG">
     <img src="CrystalBracelet.JPG">
 </div>
 
-
+<div id="hairclips" style="text-align: center;">
 <h2>
-    HairClips
+    Hair Clip
 </h2>
-<div style="text-align: center;">
     <img src="BrownHairClip.JPG" style="width: 410px; height: 410px;">
     <img src ="ButterflyHairClip.JPG" style="width: 410px; height: 410px;">
 </div>
 
+<div id="hairbands" style="text-align: center;">
 <h2>
-    HairBand 
+    Hair Band 
 </h2>
-<div style="text-align: center;">
     <img src="BlackWhiteHairBand.JPG" style="width: 410px; height: 410px;">
     <img src="CottonHairBand.JPG" style="width: 410px; height: 410px;">
   </div>
 
+<div id="bags" style="text-align: center;">
 <h2>
-    Bags
+    Bag
 </h2>
-<div style="text-align: center;">
     <img src="BlackBag.JPG">
     <img src="BrownToteBag.JPG">
     <img src="ColorBag.JPG">
 </div>
 
+<div id="bottle" style="text-align: center;">
 <h2>
-    Water Bottles
+    Water Bottle
 </h2>
-<div style="text-align: center;">
     <img src="PinkBottle.JPG" >
     <img src="MetalBottle.JPG" >
     <img src="OrangeBottle.JPG">
 </div>
 
-
+<div id="tools" style="text-align: center;">
 <h2>
-    Make Up Tools
+    Make Up Tool
 </h2>
-<div style="text-align: center;">
     <img src="Cotton.JPG">
     <img src="Puff.JPG">
 </div>
@@ -114,8 +126,5 @@
     80-05 Roosevelt Ave, Jackson Heights, NY 11372 <br>
     Open 7 Days A Week <br>
     10 AM - 8 PM <br>
-    <br>
-    <br>
-    <br>
     <br>
 </h2>
