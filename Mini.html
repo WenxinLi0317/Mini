@@ -10,10 +10,16 @@
     }
 
     img{
-        width: 405;
-        height: 405;
+        width: 410;
+        height: 410;
+        flex-wrap: wrap;       /* allows wrapping on small screens */
+        justify-content: center;
+        gap: 10px;              /* spacing between images */
+        margin: 20px 0;
+        border-radius: 8px;
     }
     
+    /*display: flex; */
 </style>
 
 <div style="text-align: center;">
@@ -38,17 +44,23 @@
 <h2>
     Silk Scarf
 </h2>
-<img src="BlackScarf.JPG">
-<img src="ColorScarf.JPG">
-<img src="GreenScarf.JPG">
+<div style="text-align: center;">
+    <img src="BlackScarf.JPG">
+    <img src="ColorScarf.JPG">
+    <img src="GreenScarf.JPG">
+</div>
+
 
 
 <h2>
     Bracelet
 </h2>
-<img src="Bracelet.JPG">
-<img src="RedBracelet.JPG">
-<img src="CrystalBracelet.JPG">
+<div style="text-align: center;">
+    <img src="Bracelet.JPG">
+    <img src="RedBracelet.JPG">
+    <img src="CrystalBracelet.JPG">
+</div>
+
 
 <h2>
     HairClips
@@ -69,16 +81,21 @@
 <h2>
     Bags
 </h2>
-<img src="BlackBag.JPG">
-<img src="BrownToteBag.JPG">
-<img src="ColorBag.JPG">
+<div style="text-align: center;">
+    <img src="BlackBag.JPG">
+    <img src="BrownToteBag.JPG">
+    <img src="ColorBag.JPG">
+</div>
 
 <h2>
     Water Bottles
 </h2>
-<img src="PinkBottle.JPG" >
-<img src="MetalBottle.JPG" >
-<img src="OrangeBottle.JPG">
+<div style="text-align: center;">
+    <img src="PinkBottle.JPG" >
+    <img src="MetalBottle.JPG" >
+    <img src="OrangeBottle.JPG">
+</div>
+
 
 <h2>
     Make Up Tools
