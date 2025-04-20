@@ -1,9 +1,48 @@
 <html lang="en" class="scroll-smooth text-[#ba6767] text-center">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mini Boutique</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () =>
+        {
+            const phoneCharmPart = document.getElementById('autoscroll');
+            let scrollAmount = 0;
+            let scrollInterval = 5;
+            let reverse = false;
+
+            function autoScroll()
+            {
+                let end = phoneCharmPart.scrollWidth - phoneCharmPart.clientWidth;
+                if (scrollAmount < end && reverse === false)
+                {
+                    scrollAmount += scrollInterval;
+                }
+                else
+                {
+                    reverse = true;
+                }
+
+                if (reverse === true && scrollAmount)
+                {
+                    scrollAmount -= 5;
+                    if (scrollAmount <= 0)
+                    {
+                        reverse = false;
+                    }
+                }
+
+                phoneCharmPart.scrollTo
+                ({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+
+            setInterval(autoScroll, 30);
+        })
+    </script>
 </head>
 
 <body class="bg-repeat bg-[url(LogoAndBG/Back.png)] font-Courier New, monospace font-bold">
@@ -99,7 +138,7 @@
 
     <section id="phone-charm" class="my-12">
         <h2 class="text-4xl mb-4">Phone Charm</h2>
-        <div class="flex overflow-x-auto justify-center space-x-4 py-4">
+        <div class="flex overflow-x-auto justify-center space-x-4 py-4" id="autoscroll">
         <img src="PhoneCharm/Barbie.JPG" alt="Barbie" class="w-96 h-96 rounded-xl" />
         <img src="PhoneCharm/BlackAndPink.JPG"  alt="BlackAndPink" class="w-96 h-96 rounded-xl" />
         <img src="PhoneCharm/BlackAndPink2.JPG"  alt="BlackAndPink2" class="w-96 h-96 rounded-xl" />
@@ -150,7 +189,6 @@
         <img src="PhoneCharm/Puppy.JPG" alt="Puppy" class="w-96 h-96 rounded-xl" />
         <img src="PhoneCharm/Puppy2.JPG" alt="Puppy2" class="w-96 h-96 rounded-xl" />
         <img src="PhoneCharm/PurpleBear.JPG" alt="PurpleBear" class="w-96 h-96 rounded-xl" />
-
         <img src="PhoneCharm/RedButterfly.JPG" alt="RedButterfly" class="w-96 h-96 rounded-xl" />
         <img src="PhoneCharm/Ribbon.JPG" alt="Ribbon" class="w-96 h-96 rounded-xl" />
         <img src="PhoneCharm/Rose.JPG" alt="Rose" class="w-96 h-96 rounded-xl" />
@@ -166,9 +204,7 @@
         <img src="PhoneCharm/UglyButterfly.JPG" alt="UglyButterfly" class="w-96 h-96 rounded-xl" />
         <img src="PhoneCharm/WhiteHeart.JPG" alt="WhiteHeart" class="w-96 h-96 rounded-xl" />
         <img src="PhoneCharm/WhiteRibbon.JPG" alt="WhiteRibbon" class="w-96 h-96 rounded-xl" />
-
         </div>
-        
     </section>
 
     <section class="my-12 text-xl mb-4">
@@ -178,8 +214,6 @@
         <div>Open 7 Days A Week </div>
         <div>10 AM - 8 PM</div>
     </section>
-
-    
 </main>
 </body>
 </html>
