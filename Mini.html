@@ -9,38 +9,34 @@
         {
             const phoneCharmPart = document.getElementById('autoscroll');
             let scrollAmount = 0;
-            let scrollInterval = 5;
-            let reverse = false;
+            let scrollInterval = 10;
+            let direction = 1;
 
             function autoScroll()
             {
-                let end = phoneCharmPart.scrollWidth - phoneCharmPart.clientWidth;
-                if (scrollAmount < end && reverse === false)
-                {
-                    scrollAmount += scrollInterval;
-                }
-                else
-                {
-                    reverse = true;
-                }
+                let end = (phoneCharmPart.scrollWidth - phoneCharmPart.clientWidth) / 2;
+                let start = -end;
 
-                if (reverse === true && scrollAmount)
+                scrollAmount += scrollInterval * direction;
+
+                if (scrollAmount >= end)
                 {
-                    scrollAmount -= 5;
-                    if (scrollAmount <= 0)
-                    {
-                        reverse = false;
-                    }
+                    direction = -1;
+                    scrollAmount = end;
+                }
+                else if (scrollAmount <= start)
+                {
+                    direction = 1;
+                    scrollAmount = start;
                 }
 
                 phoneCharmPart.scrollTo
                 ({
                     left: scrollAmount,
-                    behavior: 'smooth'
+                    behavior: 'auto'
                 });
             }
-
-            setInterval(autoScroll, 30);
+            setInterval(autoScroll, 2);
         })
     </script>
 </head>
